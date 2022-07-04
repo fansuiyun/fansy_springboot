@@ -12,7 +12,6 @@ import java.util.List;
 public class TestService {
 
     public List queryList(String id){
-        System.out.println(id);
         return new ArrayList();
     }
 

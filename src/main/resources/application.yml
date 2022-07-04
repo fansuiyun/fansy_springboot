@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: fansy_springboot
+
+  rabbitmq:
+    host: 172.20.13.167
+    port: 5672
+    username: admin
+    password: admin
+
