@@ -18,7 +18,7 @@ public class RabbitmqConfig {
     public RabbitListenerContainerFactory rabbitListenerContainerFactory(ConnectionFactory connectionFactory){
         SimpleRabbitListenerContainerFactory factory=new SimpleRabbitListenerContainerFactory();
         factory.setConnectionFactory(connectionFactory);
-        factory.setPrefetchCount(5);
+        factory.setPrefetchCount(30);
         factory.setAcknowledgeMode(AcknowledgeMode.MANUAL);
         return factory;
     }
