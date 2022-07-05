@@ -3,6 +3,7 @@ package com.fansy.less.controller;
 
 import com.fansy.less.constant.Constants;
 import com.fansy.less.service.TestService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +15,7 @@ import java.util.HashMap;
 /**
  * @author Fsy
  */
+@Slf4j
 @RestController
 @RequestMapping("/less")
 public class TestController {
@@ -32,6 +34,7 @@ public class TestController {
             hashMap.put("id",i+"pppp");
             rabbitTemplate.convertAndSend(Constants.topExchange,Constants.routekey,hashMap);
         }
+        log.info("id:{}",id);
         return id;
     }
 
