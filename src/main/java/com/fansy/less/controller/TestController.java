@@ -31,9 +31,10 @@ public class TestController {
         testService.queryList(id);
         for (int i = 0; i < 1000; i++) {
             HashMap hashMap=new HashMap();
-            hashMap.put("id",i+"pppp");
+            hashMap.put("id",i+"test4444444444");
             rabbitTemplate.convertAndSend(Constants.topExchange,Constants.routekey,hashMap);
         }
+        System.out.println("test44444444444444444");
         log.info("id:{}",id);
         return id;
     }

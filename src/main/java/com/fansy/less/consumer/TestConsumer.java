@@ -22,6 +22,7 @@ public class TestConsumer {
         long deliveryTag = message.getMessageProperties().getDeliveryTag();
         try {
             System.out.println(obj.get("id"));
+            Thread.sleep(100);
             channel.basicAck(deliveryTag,true);
         } catch (Exception e) {
             channel.basicReject(deliveryTag,false);
