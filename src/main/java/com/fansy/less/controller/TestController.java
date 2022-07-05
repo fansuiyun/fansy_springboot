@@ -27,7 +27,7 @@ public class TestController {
     @RequestMapping("/{id}")
     public String test(@PathVariable String id){
         testService.queryList(id);
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 100000; i++) {
             HashMap hashMap=new HashMap();
             hashMap.put("id",i);
             rabbitTemplate.convertAndSend(Constants.topExchange,Constants.routekey,hashMap);
