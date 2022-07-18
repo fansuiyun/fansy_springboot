@@ -34,7 +34,6 @@ public class TestController {
             user.setName("fansy"+i);
             rabbitTemplate.convertAndSend(Constants.topExchange,Constants.routekey,user);
         }
-        log.info("id:{}",id);
         return id;
     }
 
