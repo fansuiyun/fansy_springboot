@@ -31,7 +31,7 @@ public class TestController {
         for (int i = 0; i < 40; i++) {
             User user = new User();
             user.setId(i);
-            user.setName("fansy"+i);
+            user.setName("fansy"+i+"000");
             rabbitTemplate.convertAndSend(Constants.topExchange,Constants.routekey,user);
         }
         return id;
