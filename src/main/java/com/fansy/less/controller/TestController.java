@@ -35,6 +35,7 @@ public class TestController {
             rabbitTemplate.convertAndSend(Constants.topExchange,Constants.routekey,user);
         }
         System.out.println(1);
+        System.out.println(2);
         return id;
     }
 
